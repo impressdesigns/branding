@@ -69,10 +69,10 @@ function renderHtml(groups) {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Impress Designs — Brand Assets</title>
+    <title>Impress Designs Static Assets</title>
   </head>
   <body>
-    <h1>Impress Designs — Brand Assets</h1>
+    <h1>Impress Designs Static Assets</h1>
 ${sections.join("\n")}
   </body>
 </html>
