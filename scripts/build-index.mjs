@@ -30,7 +30,7 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;");
 }
 
-// Recursively collect asset files, grouped by their directory relative to root.
+// Recursively collect asset files, grouped by their directory relative to source/.
 async function collectGroups(dir) {
   const groups = new Map();
   const entries = await readdir(dir, { withFileTypes: true });
@@ -41,9 +41,9 @@ async function collectGroups(dir) {
         groups.set(key, files);
       }
     } else if (entry.isFile() && isAsset(entry.name)) {
-      const groupKey = relative(root, dir).split("\\").join("/");
+      const groupKey = relative(sourceDir, dir).split("\\").join("/");
       if (!groups.has(groupKey)) groups.set(groupKey, []);
-      groups.get(groupKey).push(relative(root, full).split("\\").join("/"));
+      groups.get(groupKey).push(relative(sourceDir, full).split("\\").join("/"));
     }
   }
   return groups;
