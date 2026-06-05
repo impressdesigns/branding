@@ -12,7 +12,7 @@ import { readdir, writeFile } from "node:fs/promises";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const sourceDir = join(root, "source");
-const outFile = join(root, "index.html");
+const outFile = join(sourceDir, "index.html");
 
 // Only these extensions are treated as listable assets.
 const ASSET_EXTENSIONS = new Set([".svg", ".png"]);
