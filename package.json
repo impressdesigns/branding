@@ -1,0 +1,15 @@
+{
+  "name": "@impressdesigns/branding",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Impress Designs company branding.",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:assets && npm run build:index",
+    "build:assets": "node scripts/build-assets.mjs",
+    "build:index": "node scripts/build-index.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}
